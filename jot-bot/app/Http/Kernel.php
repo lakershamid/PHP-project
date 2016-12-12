@@ -14,13 +14,12 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        
-        //App\Http\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-        App\Http\Middleware\EncryptCookies::class,
-        Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-        Illuminate\Session\Middleware\StartSession::class,
-        Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        App\Http\Middleware\CheckForMaintenanceMode::class
+
+        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+        \App\Http\Middleware\EncryptCookies::class,
+        \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+        \Illuminate\Session\Middleware\StartSession::class,
+        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         // App\Http\Middleware\Verify\CsrfToken::class,
 
         //Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
@@ -30,7 +29,7 @@ class Kernel extends HttpKernel
         //Illuminate\View\Middleware\ShareErrorsFromSession::class,
         // App\Http\Middleware\Verify\CsrfToken::class,
 
-        
+
 ];
 
     /**
@@ -76,6 +75,6 @@ class Kernel extends HttpKernel
         //'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         //'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
 
-        
+
 ];
 }
